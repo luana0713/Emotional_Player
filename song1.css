@@ -42,7 +42,7 @@
           background: none;
       border: none;
       font-size: 2.5em;
-      color: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(224, 212, 230, 0.6));
+      /* color: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(224, 212, 230, 0.6)); */
       cursor: pointer;
       text-shadow: 0 0 8px #bbb7c2; 
       transition: transform 0.2s ease;
@@ -59,12 +59,12 @@
   border-radius: 5px;
   margin-top: 15px;
   position: relative;
-  overflow: visible; /* importante pra bolinha sair da barra */
+  overflow: visible; 
 }
 
 .progress-bar {
   height: 100%;
-  background-color: #b67bff;;
+  background-color: #a99cb9;;
   width: 0%;
   transition: width 0.2s ease;
 }
