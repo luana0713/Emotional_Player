@@ -1,6 +1,5 @@
 const audio = document.getElementById('audio');
 const progressDot = document.getElementById('progress-dot');
-
   const playBtn = document.getElementById('playBtn');
   const progressBar = document.getElementById('progress-bar');
   const vinil = document.getElementById('vinil');
@@ -29,3 +28,10 @@ const progressDot = document.getElementById('progress-dot');
     vinil.style.animationPlayState = 'paused';
     progressBar.style.width = '0%';
   });
+  progressBar.parentElement.addEventListener('click', (e) => {
+  const bar = progressBar.parentElement;
+  const rect = bar.getBoundingClientRect();
+  const clickX = e.clientX - rect.left;
+  const percent = clickX / rect.width;
+  audio.currentTime = percent * audio.duration;
+});
