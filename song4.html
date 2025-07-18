@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music</title>
+    <link rel="stylesheet" href="song1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="player-container">
+                <video autoplay muted loop id="bg-video">
+    <source src="Vídeo sem título ‐ Feito com o Clipchamp.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo HTML5.
+  </video>
+  <div >
+    <img class="album" src="https://i.pinimg.com/736x/d9/7c/db/d97cdb7ea3badcd7dc528ae491f9e778.jpg" alt="">
+  </div>
+  <div class="vinil" id="vinil"></div>
+  <div class="music-title"> Billie Eilish - THE GREATEST</div>
+
+  <div class="controls">
+    <button id="playBtn"  class="play-icon" onclick="togglePlay()"> ▶</button>
+  </div>
+
+ <div class="progress">
+  <div class="progress-bar" id="progress-bar"></div>
+  <div class="progress-dot" id="progress-dot"></div> <!-- ✅ fora da barra -->
+</div>
+
+
+  <audio id="audio" src="Billie Eilish - THE GREATEST (Official Lyric Video).mp3"></audio>
+</div>
+<script src="song1.js"></script>
+</body>
+</html>
