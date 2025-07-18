@@ -4,13 +4,122 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden;
+      /* overflow: hidden; */
       
     }
   #bg-video {
     position: fixed;
   top: 50%;
+  left: 50%;body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: fixed;
+  top: 50%;
   left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  /* Atenção: top: 200px pode quebrar o centralizado do vídeo */
+  /* Se quiser manter, tá ok, mas pode dar problema em responsividade */
+  top: 200px;
+}
+
+.container {
+  background: rgba(10, 0, 20, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 90%;
+  margin-left: 190px;
+  margin-top: 90px;
+  margin-right: -20px;
+  box-shadow: 0 0 20px rgba(150, 90, 255, 0.2);
+  animation: fadeIn 1.2s ease-out forwards;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 15px;
+  background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(224, 212, 230, 0.6));
+  border: none;
+  border-radius: 25px;
+  color: #f2e6ff;
+  font-size: 1em;
+  box-shadow: 0 0 10px #a579d6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px #000;
+  /* Mantendo padding e font-size */
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(145deg, #000000, rgba(20, 1, 29, 0.6));
+  box-shadow: 0 0 18px #f5e0ff;
+}
+
+h1 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  color: #dfc7ff;
+  text-shadow: 0 0 8px #0a021a;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------- Responsividade -------- */
+
+/* Ajustes para telas médias */
+@media (max-width: 900px) {
+  .container {
+    margin-left: 30px; /* reduz margem esquerda */
+    margin-right: 30px; /* para não ficar negativo */
+    width: auto;
+  }
+}
+
+/* Ajustes para celulares e telas pequenas */
+@media (max-width: 480px) {
+  .container {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: auto;
+    padding: 40px 20px; /* mantém padding mas com menos horizontal */
+    margin-top: 60px;
+  }
+  
+  .box {
+    grid-template-columns: 1fr; /* uma coluna só para celular */
+  }
+}
+
   min-width: 100%;
   min-height: 100%;
   width: auto;
